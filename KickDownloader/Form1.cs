@@ -30,7 +30,7 @@ namespace KickDownloader
                 return;
             }
 
-            string clipPattern = @"https://kick\.com/.*\?clip=(?<clipid>\d+)";
+            string clipPattern = @"https://kick\.com/.*\?clip=(?<clipid>[^&\s]+)";
             Regex clipRegex = new Regex(clipPattern);
             string videoPattern = @"https://kick\.com/video/(?<uuid>[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})";
             Regex videoRegex = new Regex(videoPattern);
